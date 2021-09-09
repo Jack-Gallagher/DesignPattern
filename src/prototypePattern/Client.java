@@ -14,9 +14,10 @@ public class Client {
         mail.setTail("of bank");
 
         while (i < MAX){
-            mail.setAppellation(i+"sir");
-            mail.setReceiver(i + "@email");
-            sendMail(mail);
+            Mail cloneMail = mail.clone();
+            cloneMail.setAppellation(i+"sir");
+            cloneMail.setReceiver(i + "@email");
+            sendMail(cloneMail);
             i++;
         }
     }
