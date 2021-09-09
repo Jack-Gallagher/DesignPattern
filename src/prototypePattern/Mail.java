@@ -1,12 +1,14 @@
 package prototypePattern;
 
+import com.sun.tools.javac.Main;
+
 /**
  * @Author：Jack
  * @Date： 2021/9/8 - 22:58
  * @Description： prototypePattern
  * @Version： 1.0
  */
-public class Mail {
+public class Mail implements Cloneable{
     private String receiver;
     private String subject;
     private String appellation;
@@ -16,6 +18,16 @@ public class Mail {
     public Mail(AdvTemplate advTemplate) {
         this.context = advTemplate.getAdvContxt();
         this.subject = advTemplate.getAdvSubject();
+    }
+
+    public Mail clone(){
+        Mail mail = null;
+        try {
+            mail = (Mail) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return mail;
     }
 
     public String getReceiver() {
