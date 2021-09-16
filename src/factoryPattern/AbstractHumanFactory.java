@@ -1,5 +1,5 @@
 package factoryPattern;
 
 public abstract class AbstractHumanFactory {
-    public abstract <T extends Human> T createHuman(Class<T> c);
+    public abstract <T extends Human> T createMan(Class<T> c);
 }

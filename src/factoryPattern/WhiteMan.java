@@ -1,14 +1,13 @@
 package factoryPattern;
 
 public class WhiteMan implements Human{
-
     @Override
     public void getColor() {
-        System.out.println("white man");
+        System.out.println("get white color");
     }
 
     @Override
-    public void say() {
-        System.out.println("I am white man");
+    public void talk() {
+        System.out.println("speak english");
     }
 }
